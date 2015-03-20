@@ -89,6 +89,12 @@ public abstract class DraftCube {
         return cubeCards;
     }
     
+    public void setCubeCards(ArrayList<String> cubeList) {
+        for(String cardName : cubeList) {
+            this.cubeCards.add(new CardIdentity(cardName, ""));
+        }
+    }
+    
     public List<Card> createBooster() {
         List<Card> booster = new ArrayList<>();
         if (leftCubeCards.isEmpty()) {
